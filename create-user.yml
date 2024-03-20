@@ -1,12 +1,9 @@
 ---
-- name: Create new user
+- name: Create File Playbook
   hosts: all
-  become: yes  # This allows the tasks to be run with root privileges
-
+  become: true
   tasks:
-    - name: Create a new user
-      user:
-        name: ravi
-        state: present  # Ensure the user exists
-        shell: /bin/bash  # Specify the user's shell
-        createhome: yes  # Create user's home directory
+    - name: Create a file
+      file:
+        path: /home/ubuntu/King
+        state: touch
