@@ -5,5 +5,5 @@
   tasks:
     - name: Create a file
       file:
-        path: /home/ubuntu/King
+        path: /home/ubuntu/Kohli
         state: touch
