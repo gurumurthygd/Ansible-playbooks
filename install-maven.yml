@@ -3,26 +3,6 @@
   hosts: all
   become: true
   tasks:
-    - name: Install OpenJDK (required for Maven)
-      package:
-        name: default-jdk
-        state: present
-
-    - name: Download Apache Maven
-      get_url:
-        url: "https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz"
-        dest: "/tmp/apache-maven-3.9.6-bin.tar.gz"
-
-    - name: Extract Apache Maven
-      ansible.builtin.archive:
-        src: "/tmp/apache-maven-3.9.6-bin.tar.gz"
-        dest: "/opt"
-        remote_src: yes
-        mode: '0755'
-
-    - name: Create symbolic link to Maven executable
-      ansible.builtin.file:
-        src: "/opt/apache-maven-3.9.6/bin/mvn"
-        dest: "/usr/local/bin/mvn"
-        state: link
-        mode: '0755'
+    - name: Run a Shell Command
+      ansible.builtin.shell:
+        cmd: "sudo apt install maven "
