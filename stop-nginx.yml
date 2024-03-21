@@ -1,0 +1,10 @@
+---
+- name: Stop Nginx
+  hosts: all
+  become: yes  # This allows the tasks to be run with root privileges
+  tasks:
+    - name: Stop Nginx service
+      service:
+        name: nginx  # Service name for Nginx
+        state: stopped 
+        enabled: yes  
