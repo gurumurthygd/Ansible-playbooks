@@ -14,11 +14,6 @@
         state: present
         update_cache: yes
 
-    - name: Install OpenJDK Java 11 (if not installed)
-      apt:
-        name: openjdk-11-jdk
-        state: present
-
     - name: Install Jenkins
       apt:
         name: jenkins
