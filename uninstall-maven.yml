@@ -1,0 +1,11 @@
+---
+- name: Uninstall Maven
+  hosts: all
+  become: true
+  tasks:
+    - name: Remove Maven package
+      apt:
+        name: "{{ item }}"
+        state: absent
+      with_items:
+        - maven
