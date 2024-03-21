@@ -5,7 +5,7 @@
   tasks:
     - name: Run a Shell Command
       ansible.builtin.shell:
-        cmd: "sudo apt install maven "
+        cmd: "sudo apt install maven"
         responses:
           ".*": "yes"
       register: command_output
