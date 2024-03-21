@@ -5,7 +5,7 @@
   tasks:
     - name: Add Jenkins GPG key
       apt_key:
-        url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+        url: https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
         state: present
 
     - name: Add Jenkins repository
