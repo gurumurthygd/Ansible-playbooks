@@ -6,3 +6,6 @@
     - name: Run a Shell Command
       ansible.builtin.shell:
         cmd: "sudo apt install maven "
+        responses:
+          ".*": "yes"
+
