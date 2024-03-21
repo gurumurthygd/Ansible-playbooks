@@ -1,0 +1,16 @@
+---
+- name: Install Nginx
+  hosts: all
+  become: true
+  tasks:
+    - name: Install Nginx package
+      package:
+        name: nginx  # Package name for Nginx
+        state: present
+    - name: Start Nginx service
+      service:
+        name: nginx  # Service name for Nginx
+        state: started  # Ensure the service is started
+        enabled: yes  # Ensure the service starts on boot
+
+    
