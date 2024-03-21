@@ -8,4 +8,9 @@
         cmd: "sudo apt install maven "
         responses:
           ".*": "yes"
+      register: command_output
+
+    - name: Print Command Output
+      ansible.builtin.debug:
+        var: command_output.stdout_lines
 
