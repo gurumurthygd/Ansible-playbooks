@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Excecute the playbook') {
             steps {
-                ansiblePlaybook credentialsId: 'Ansibleserver', installation: 'Ansible', inventory: 'host.inv', playbook: 'create-file.yml', vaultTmpPath: ''
+                ansiblePlaybook credentialsId: 'Ansibleserver', installation: 'Ansible', inventory: 'host.inv', playbook: 'jenkins-installation.yml', vaultTmpPath: ''
                 
             }
         }
